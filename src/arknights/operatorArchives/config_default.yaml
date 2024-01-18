@@ -5,6 +5,7 @@ operatorSkin:
     showImage: false
 
 searchSetting:
+    disableKeyword: false
     needPrefix: false
     similarMode: false
     lengthLimit: 10

@@ -29,6 +29,12 @@
             "title": "关键词匹配设置",
             "type": "object",
             "properties": {
+                "disableKeyword": {
+                    "title": "完全关闭关键词查询",
+                    "description": "是否完全关闭该功能的各种响应",
+                    "type": "boolean",
+                    "default": false
+                },
                 "needPrefix": {
                     "title": "“查询”关键词",
                     "description": "是否需要添加“查询”关键词触发功能",

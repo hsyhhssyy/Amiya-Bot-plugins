@@ -1,8 +1,12 @@
+import os
+import re
+import uuid
 from amiyabot import ChainBuilder
 from amiyabot.adapters.kook import KOOKBotInstance
 from amiyabot.adapters.mirai import MiraiForwardMessage
 from amiyabot.adapters.cqhttp import CQHttpBotInstance, CQHTTPForwardMessage
 from amiyabot.adapters.tencent.qqGuild import QQGuildBotInstance
+from amiyabot.builtin.messageChain.element import Html
 
 from core import Chain, Message
 from core.resource.arknightsGameData import ArknightsGameData, ArknightsGameDataResource
@@ -244,7 +248,6 @@ async def _(data: Message):
         return Chain(data).text('博士，请仔细描述想要查询的信息哦')
 
     return Chain(data).html(template, result)
-
 
 @bot.on_message(group_id='operator', verify=FuncsVerify.operator)
 async def _(data: Message):
